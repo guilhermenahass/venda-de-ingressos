@@ -1,0 +1,19 @@
+{
+  "crons": [
+    {
+      "path": "/api/cron/reconciliar",
+      "schedule": "*/5 * * * *"
+    },
+    {
+      "path": "/api/cron/backup",
+      "schedule": "0 6 * * *"
+    },
+    {
+      "path": "/api/cron/backup?extra=abertura",
+      "schedule": "0 15 18 10 *"
+    }
+  ],
+  "regions": [
+    "gru1"
+  ]
+}

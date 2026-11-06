@@ -1,0 +1,100 @@
+@import "tailwindcss";
+
+/* Ferro e Chapa — o mundo do PECkywest.
+   Chão de ferro estampado; papel envelhecido só onde é citado (a arte, a chapa
+   do pedido, o ingresso), nunca como fundo de página. A luz vem sempre de cima:
+   é ela que constrói o degrau da arquibancada. */
+:root {
+  --ferro: #14110d;        /* chão */
+  --ferro-face: #221c15;   /* face superior do degrau, voltada para a luz */
+  --ferro-espelho: #0c0a07;/* espelho do degrau, na sombra */
+  --ferro-rebaixo: #3a332a;/* chapa gasta: lugar já vendido */
+  --latao: #c08a2e;        /* gravação, filete, estado marcado */
+  --latao-claro: #e3b75c;
+  --latao-quente: #f0a93b; /* o instante do ferro em brasa, só na marcação */
+  --papel: #e7dcc4;        /* papel envelhecido */
+  --papel-sombra: #cdbf9f;
+  --tinta: #1a1512;        /* tinta do cartaz, sobre papel */
+  --leitura: #d8caac;      /* texto sobre ferro: papel puxado do mesmo tom */
+  --leitura-fraca: #9b8e73;/* secundário, tingido do mesmo matiz, nunca cinza */
+  --alerta: #d8562f;
+}
+
+@theme inline {
+  --color-ferro: var(--ferro);
+  --color-ferro-face: var(--ferro-face);
+  --color-ferro-espelho: var(--ferro-espelho);
+  --color-ferro-rebaixo: var(--ferro-rebaixo);
+  --color-latao: var(--latao);
+  --color-latao-claro: var(--latao-claro);
+  --color-papel: var(--papel);
+  --color-papel-sombra: var(--papel-sombra);
+  --color-tinta: var(--tinta);
+  --color-leitura: var(--leitura);
+  --color-leitura-fraca: var(--leitura-fraca);
+  --color-alerta: var(--alerta);
+  --font-display: var(--font-rye);
+  --font-sans: var(--font-archivo);
+}
+
+/* Sem tema escuro automático: esta página tem um chão só, o dela. O bloco
+   prefers-color-scheme do scaffold trocava só a cor do texto e deixava os
+   campos do carrinho invisíveis no celular. */
+html {
+  background: var(--ferro);
+  color-scheme: dark;
+}
+
+body {
+  background:
+    /* granulado do metal estampado */
+    radial-gradient(ellipse 120% 80% at 50% -10%, #241d15 0%, transparent 60%),
+    var(--ferro);
+  color: var(--leitura);
+  font-family: var(--font-archivo), system-ui, sans-serif;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Superfícies do navegador: seleção, cursor, barra de rolagem e anel de foco
+   saem do padrão de ninguém e passam a ser deste mundo. */
+::selection { background: var(--latao); color: var(--ferro); }
+:root { accent-color: var(--latao); caret-color: var(--latao-claro); }
+* { scrollbar-color: var(--latao) var(--ferro-espelho); scrollbar-width: thin; }
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: var(--ferro-espelho); }
+::-webkit-scrollbar-thumb { background: var(--latao); border: 2px solid var(--ferro-espelho); }
+
+:where(a, button, input, select, [tabindex]):focus-visible {
+  outline: 2px solid var(--latao-claro);
+  outline-offset: 2px;
+}
+a { text-underline-offset: 0.2em; text-decoration-thickness: 1px; }
+
+/* Placa: a peça de metal que carrega informação. Luz de cima em relevo alto. */
+.placa {
+  background: linear-gradient(180deg, var(--ferro-face) 0%, var(--ferro) 62%, var(--ferro-espelho) 100%);
+  border: 1px solid color-mix(in srgb, var(--latao) 40%, transparent);
+  box-shadow: 0 2px 0 0 var(--ferro-espelho), 0 8px 18px -10px #000;
+}
+
+/* Papel citado: a chapa do pedido e o ingresso, sobre o chão de ferro. */
+.papel {
+  background: var(--papel);
+  color: var(--tinta);
+  box-shadow: 0 1px 0 0 var(--papel-sombra) inset, 0 10px 24px -14px #000;
+}
+
+.gravado { font-family: var(--font-rye), Georgia, serif; letter-spacing: 0.01em; }
+
+/* Campo de formulário em metal: fundo próprio e texto explícito, para nunca
+   herdar cor de lugar nenhum. */
+.campo {
+  background: var(--ferro-espelho);
+  color: var(--papel);
+  border: 1px solid color-mix(in srgb, var(--latao) 45%, transparent);
+}
+.campo::placeholder { color: var(--leitura-fraca); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}

@@ -1,0 +1,97 @@
+{
+  "_leia": "Único arquivo a mexer para publicar. Preços em REAIS, preço único por setor: é o que a PEC recebe por ingresso; a taxa do Mercado Pago (Pix ou cartão) é somada por cima e mostrada à parte. Depois de mexer: npm run publicar -- --simular (confere) e npm run publicar (publica). lugares_guardados: por sessão, aparecem como vendidos. lugares_indisponiveis: aparecem no mapa como indisponíveis e não são vendidos (cadeiras ao lado da mesa de som; dá para liberar depois). lugares_fora_do_mapa: somem do mapa (mesa de som). meia_para_todos: os preços aparecem como meia-entrada para todos, sem prazo.",
+  "nome": "PECkywest — O Mistério de Daisy Belle",
+  "sessoes": [
+    {
+      "slug": "peckywest-06-11",
+      "data": "2026-11-06T19:30:00-03:00"
+    },
+    {
+      "slug": "peckywest-07-11",
+      "data": "2026-11-07T19:30:00-03:00"
+    }
+  ],
+  "abertura_da_venda": "2026-10-18T10:00:00-03:00",
+  "parcelas_no_cartao": 5,
+  "meia_para_todos": true,
+  "precos_liquidos_em_reais": {
+    "Fileira do chão": 249,
+    "Fileira da frente": 219,
+    "Fileira de trás": 179
+  },
+  "lugares_guardados": {
+    "peckywest-06-11": [
+      "C-1",
+      "C-2",
+      "C-3",
+      "C-4",
+      "C-5",
+      "C-6",
+      "C-7",
+      "C-8",
+      "C-9",
+      "C-10"
+    ],
+    "peckywest-07-11": [
+      "C-13",
+      "C-14",
+      "C-15",
+      "C-16",
+      "C-17",
+      "C-18",
+      "C-19"
+    ]
+  },
+  "lugares_indisponiveis": [
+    "Q-1",
+    "Q-2",
+    "Q-3",
+    "Q-4",
+    "Q-5",
+    "Q-6",
+    "Q-7",
+    "Q-8",
+    "Q-17",
+    "Q-18",
+    "Q-19",
+    "Q-20",
+    "Q-21",
+    "Q-22",
+    "Q-23",
+    "Q-24",
+    "R-1",
+    "R-2",
+    "R-3",
+    "R-4",
+    "R-5",
+    "R-6",
+    "R-7",
+    "R-8",
+    "R-17",
+    "R-18",
+    "R-19",
+    "R-20",
+    "R-21",
+    "R-22",
+    "R-23",
+    "R-24"
+  ],
+  "lugares_fora_do_mapa": [
+    "Q-9",
+    "Q-10",
+    "Q-11",
+    "Q-12",
+    "Q-13",
+    "Q-14",
+    "Q-15",
+    "Q-16",
+    "R-9",
+    "R-10",
+    "R-11",
+    "R-12",
+    "R-13",
+    "R-14",
+    "R-15",
+    "R-16"
+  ]
+}

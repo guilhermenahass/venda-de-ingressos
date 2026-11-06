@@ -1,0 +1,46 @@
+{
+  "name": "pec-ingressos",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "test": "vitest run",
+    "db:apply": "tsx --env-file=.env.local scripts/apply-sql.ts",
+    "db:seed": "tsx --env-file=.env.local scripts/seed-seats.ts data/teatro.csv",
+    "event:create": "tsx --env-file=.env.local scripts/create-event.ts",
+    "event:export": "tsx --env-file=.env.local scripts/export-lista.ts",
+    "mp:assinatura": "tsx --env-file=.env.local scripts/conferir-assinatura.ts",
+    "lugares:reservar": "tsx --env-file=.env.local scripts/reservar-lugares.ts",
+    "serve": "next build && next start",
+    "publicar": "tsx --env-file=.env.local scripts/publicar.ts"
+  },
+  "dependencies": {
+    "@panzoom/panzoom": "^4.6.2",
+    "@supabase/supabase-js": "^2.117.2",
+    "html5-qrcode": "^2.3.8",
+    "mercadopago": "^3.6.1",
+    "next": "^16.3.7",
+    "qrcode": "^1.5.4",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "resend": "^6.31.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^24.19.0",
+    "@types/qrcode": "^1.5.6",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "postgres": "^3.4.9",
+    "tailwindcss": "^4",
+    "tsx": "^4.23.15",
+    "typescript": "^5",
+    "vite": "^8.3.1",
+    "vitest": "^5.0.2"
+  },
+  "allowScripts": {
+    "esbuild": true
+  }
+}
