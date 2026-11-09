@@ -17,6 +17,8 @@ Projetei e construí o sistema do zero, como entrega da GG Code, minha agência.
 
 ## Resultado (espetáculo encerrado em 07/11/2026)
 
+<img src="docs/img/resultados.svg" alt="Resultado: 703 ingressos, 491 no dia da abertura, 92% de entradas com QR e cerca de R$ 10 mil a mais para a escola" width="900">
+
 **Venda**
 
 | | |
@@ -40,7 +42,7 @@ Projetei e construí o sistema do zero, como entrega da GG Code, minha agência.
 | | |
 |---|---|
 | Taxa de plataforma | **zero**: o dinheiro caiu direto na conta da escola, e o comprador pagou só a taxa do Mercado Pago, mostrada à parte |
-| Quanto a escola deixou de perder | com o mesmo valor pago pelo público, uma plataforma com 10% de taxa deixaria **cerca de 7% a menos** na conta da escola, e uma com cerca de 20% deixaria cerca de 14% a menos |
+| Quanto ficou a mais na escola | **cerca de R$ 10 mil** a mais na conta, frente a uma plataforma convencional com taxa de 10% (com o mesmo valor pago pelo público) |
 | Custo fixo do sistema | perto de zero (Vercel + Supabase) |
 | Teste de carga antes da abertura | 250 compras simultâneas, nenhum lugar vendido em dobro |
 
