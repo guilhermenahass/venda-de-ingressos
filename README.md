@@ -26,7 +26,7 @@ Projetei e construí o sistema do zero, como entrega da GG Code, minha agência.
 | Pico de demanda | **491 ingressos vendidos no dia da abertura**, sem fila, erro ou lugar vendido em dobro |
 | Carrinho com as duas sessões | 38 compras levaram ingressos para os dois dias numa compra só |
 | Meio de pagamento | Pix em 141 compras, cartão em 75 |
-| Estornos | 4 compras, todas feitas pelo próprio sistema |
+| Cancelamentos | 4 compras canceladas pelo sistema, com os lugares liberados na hora para nova venda |
 
 **Portaria**
 
