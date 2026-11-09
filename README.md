@@ -1,5 +1,7 @@
 # PEC Ingressos
 
+[![CI](https://github.com/guilhermenahass/venda-de-ingressos/actions/workflows/ci.yml/badge.svg)](https://github.com/guilhermenahass/venda-de-ingressos/actions/workflows/ci.yml)
+
 **Sistema próprio de venda de ingressos com mapa de assentos, Pix e cartão, ingresso com QR e check-in na portaria. Usado num espetáculo real de uma escola de dança em Sorocaba (SP): 679 ingressos vendidos, 222 compras e 644 pessoas passando pela portaria com QR.**
 
 <img src="docs/img/mapa.jpg" alt="Mapa de assentos do teatro, quase todo vendido" width="720">
@@ -95,7 +97,7 @@ components/SeatMap   mapa de assentos com zoom e carrinho
 lib/                 Mercado Pago, e-mail (Resend), taxas, QR, alertas
 supabase/migrations/ 24 migrations: esquema, funções de reserva e pagamento, travas, limites
 scripts/             criação de evento, teste de carga, caos, segurança em produção, lista da portaria
-tests/               91 testes (Vitest) contra banco real
+tests/               91 testes (Vitest): 23 de unidade rodam no CI a cada commit; o resto roda contra um banco real
 data/                planta do teatro (CSV) e configuração do evento
 ```
 

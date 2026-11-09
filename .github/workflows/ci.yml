@@ -1,0 +1,23 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  testes:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Tipos do Next.js
+        run: npx next typegen
+      - name: Verificação de tipos (TypeScript)
+        run: npx tsc --noEmit
+      - name: Testes de unidade (sem banco)
+        run: npx vitest run -c vitest.unit.config.mts
