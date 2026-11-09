@@ -1,6 +1,6 @@
 # PEC Ingressos
 
-**Sistema próprio de venda de ingressos com mapa de assentos, Pix e cartão, ingresso com QR e check-in na portaria. Em produção: cerca de 680 ingressos vendidos para as duas sessões do espetáculo de uma escola de dança em Sorocaba (SP).**
+**Sistema próprio de venda de ingressos com mapa de assentos, Pix e cartão, ingresso com QR e check-in na portaria. Usado num espetáculo real de uma escola de dança em Sorocaba (SP): 679 ingressos vendidos, 222 compras e 644 pessoas passando pela portaria com QR.**
 
 <img src="docs/img/mapa.jpg" alt="Mapa de assentos do teatro, quase todo vendido" width="720">
 
@@ -15,14 +15,36 @@ A PEC Studio, escola de dança em Sorocaba desde 2015, faz espetáculos num teat
 
 Projetei e construí o sistema do zero, como entrega da GG Code, minha agência.
 
-## Resultado
+## Resultado (espetáculo encerrado em 07/11/2026)
+
+**Venda**
 
 | | |
 |---|---|
-| Ingressos vendidos | **~680** em 2 sessões (06 e 07/11/2026) |
-| Taxa de plataforma | **zero**: o comprador paga só a taxa do Mercado Pago, mostrada à parte |
+| Ingressos emitidos | **703** (679 vendidos + 24 cortesias) em 2 sessões |
+| Compras | **222**, de 162 compradores diferentes |
+| Pico de demanda | **491 ingressos vendidos no dia da abertura**, sem fila, erro ou lugar vendido em dobro |
+| Carrinho com as duas sessões | 38 compras levaram ingressos para os dois dias numa compra só |
+| Meio de pagamento | Pix em 141 compras, cartão em 75 |
+| Estornos | 4 compras, todas feitas pelo próprio sistema |
+
+**Portaria**
+
+| | |
+|---|---|
+| Entradas validadas por QR | **644 de 703 ingressos (92%)**: 305 na sexta e 339 no sábado |
+| Ingresso usado duas vezes | nenhum: o banco recusa a segunda leitura |
+
+**Para a escola**
+
+| | |
+|---|---|
+| Taxa de plataforma | **zero**: o dinheiro caiu direto na conta da escola, e o comprador pagou só a taxa do Mercado Pago, mostrada à parte |
+| Quanto a escola deixou de perder | com o mesmo valor pago pelo público, uma plataforma com 10% de taxa deixaria **cerca de 7% a menos** na conta da escola, e uma com cerca de 20% deixaria cerca de 14% a menos |
 | Custo fixo do sistema | perto de zero (Vercel + Supabase) |
-| Teste de carga | 250 compras simultâneas, nenhum lugar vendido em dobro |
+| Teste de carga antes da abertura | 250 compras simultâneas, nenhum lugar vendido em dobro |
+
+<sub>Números tirados do banco de dados de produção no fechamento das vendas. As taxas das outras plataformas são estimativas públicas, não valores oficiais.</sub>
 
 <img src="docs/img/entrada.jpg" alt="Página de entrada do espetáculo" width="560">
 
